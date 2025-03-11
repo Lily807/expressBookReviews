@@ -121,3 +121,32 @@ if (filtered_reviews.length > 0) {
 } 
 */
 
+
+/* regd_users.post("/auth/review/:isbn", (req, res) => {}
+  
+  const isbn = req.params.isbn;
+  const review = req.query.review;
+
+  const username = req.user.data;
+
+  let filteredBooks = Object.entries(books).filter(([key, value]) => {
+      return value.isbn === isbn });
+  // Create or update review based on provided username
+  
+  if (req.user.data) {
+      username[req.user.data] = {
+
+      if (!filteredBooks) {
+          return res.status(404).json({ message: "Book not found" });
+      }
+
+      if (!filteredBooks.reviews){
+          filteredBooks.reviews = {};
+      }
+
+      filteredBooks.reviews[username] = review;
+  };
+}
+return res.status(200).json({ message: "Review added/updated", reviews: filteredBooks.reviews });  
+  
+*/ 

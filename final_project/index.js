@@ -19,7 +19,7 @@ app.use("/customer/auth/*", function auth(req,res,next){
 
         // Verify JWT token
         jwt.verify(token, "access", (err, user) => {
-            if (!err) {
+            if (!err) { 
                 req.user = user;
                 next(); // Proceed to the next middleware
             } else {
